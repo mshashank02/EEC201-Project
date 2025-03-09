@@ -1,4 +1,5 @@
-****DSP Winter 2025 Project********************
+# DSP Winter 2025 Project
+
 Team Name: Vocalists
 Students: Shashank M, Sahishnu Raju Kakarlapudi
 
