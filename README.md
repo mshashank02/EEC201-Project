@@ -1,7 +1,7 @@
 # DSP Winter 2025 Project
 
-Team Name: Vocalists
-Students: Shashank M, Sahishnu Raju Kakarlapudi
+## Team Name: Vocalists
+### Students: Shashank M, Sahishnu Raju Kakarlapudi
 
 Intructions to run code:
 DSP_Speech_Winter_test1.m
