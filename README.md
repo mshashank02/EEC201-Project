@@ -107,3 +107,15 @@ Exploring deep learning-based speaker embeddings for improved accuracy and scala
 Implementing real-time speaker recognition applications for practical deployment.
 
 **Figure 5. Flow diagram of LBG algorithm (Adopted from Rabiner and Juang, 1993)**
+
+## **7. Refrences**
+Fazel, A., & Chakrabartty, S. (2011). An Overview of Statistical Pattern Recognition Techniques for Speaker Verification. *IEEE Circuits and Systems Magazine, 11*(2), 62-81. https://doi.org/10.1109/MCAS.2011.941080
+
+Abdouni, A., Vargiolu, R., & Zahouani, H. (2018). Impact of finger biophysical properties on touch gestures and tactile perception: Aging and gender effects. *Scientific Reports.* https://doi.org/10.1038/s41598-018-30677-2
+
+Mohd Ali, Y., Paulraj, M. P., Yaacob, S., Yusuf, R., & Abu Bakar, S. (2013). Analysis of Accent-Sensitive Words in Multi-Resolution Mel-Frequency Cepstral Coefficients for Classification of Accents in Malaysian English. *International Journal of Automotive and Mechanical Engineering, 7*, 1053-1073. https://doi.org/10.15282/ijame.7.2012.21.0086
+
+Casil, R., Dimaunahan, E., Manamparan, M., Nia, B., & Beltran Jr, A. (2014). A DSP Based Vector Quantized Mel Frequency Cepstrum Coefficients for Speech Recognition. *Institute of Electronics Engineers of the Philippines (IECEP) Journal, 3*, 1-5.
+
+Lafta, H., & Al-Sultan, A. (2015). Mel Frequency Cepstrum Coefficients and Enhanced LBG Algorithm for Speaker Recognition. *Researcher, 7*, 19-25. Retrieved from http://www.sciencepub.net/researcher
+
