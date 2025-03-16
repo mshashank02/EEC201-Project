@@ -97,6 +97,10 @@ During testing, tthe system extracts MFCC features from the test speech samples 
 
 The final output of the system displays the predicted speaker for each test sample and computes the overall recognition accuracy.
 
+![Figure 1. Basic structures of speaker identification systems](images/Fig5.png)
+
+Figure 5. Flow diagram of LBG algorithm - ref.5
+
 ## **5. Results and Analysis**
 In this preliminary evaluation, the system was tested on a dataset where speakers pronounced the word "zero." The system achieved **100% recognition accuracy** for this specific test case. 
 
@@ -115,9 +119,7 @@ Evaluating the system’s performance in noisy environments.
 Exploring deep learning-based speaker embeddings for improved accuracy and scalability.
 Implementing real-time speaker recognition applications for practical deployment.
 
-![Figure 1. Basic structures of speaker identification systems](images/Fig5.png)
 
-Figure 5. Flow diagram of LBG algorithm - ref.5
 
 ## **7. Refrences**
 Fazel, A., & Chakrabartty, S. (2011). An Overview of Statistical Pattern Recognition Techniques for Speaker Verification. *IEEE Circuits and Systems Magazine, 11*(2), 62-81. https://doi.org/10.1109/MCAS.2011.941080
