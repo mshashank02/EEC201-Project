@@ -34,7 +34,10 @@ Adjust the **number of speakers** in **lines 12 and 13** based on the test being
 ## **1. Introduction**
 Speaker recognition is an essential application of digital signal processing (DSP) that enables the identification of individuals based on their speech characteristics. This project implements a speaker recognition system using Mel Frequency Cepstral Coefficients (MFCC) and vector quantization techniques. The goal is to extract and compare unique voice features for accurate speaker identification. By leveraging signal processing techniques, we aim to create a system capable of recognizing speakers based on their speech patterns, even with variations in volume, background noise, and pronunciation.
 
-**Figure 1. Basic structures of speaker identification systems**
+![Figure 1. Basic structures of speaker identification systems](images/Fig1.png)
+
+
+Figure 1. Basic structures of speaker identification systems - ref.1
 
 ## **2. Problem Statement**
 The primary objective of this project is to develop an efficient and robust speaker recognition system that can distinguish between different speakers based on their vocal characteristics. One of the key challenges in speaker recognition is ensuring that extracted speech features are distinct enough to enable accurate classification. Factors such as noise, pitch variations, and recording quality can influence recognition performance. 
@@ -51,8 +54,10 @@ To prepare the audio data for feature extraction, several preprocessing steps ar
 - **Pre-Emphasis Filtering:** A high-pass filter is applied to the speech signal to amplify high-frequency components, improving the robustness of extracted features.
 - **Framing and Windowing:** The speech signal is divided into overlapping frames to ensure a smooth spectral transition and maintain time-domain characteristics.
 - **Short-Time Fourier Transform (STFT):** STFT is used to convert the time-domain signal into a frequency-domain representation, which provides a better understanding of the speech signal's spectral properties.
+  
+![Figure 1. Basic structures of speaker identification systems](images/Fig2.png) 
 
-**Figure 2. Block diagram of the MFCC processor**
+Figure 2. Block diagram of the MFCC processor - ref.2
 
 ### **3.2 Feature Extraction using MFCC**
 Feature extraction is a crucial step in speaker recognition, as it helps to isolate speaker-specific characteristics. The system extracts MFCCs from the speech signals because they closely mimic human auditory perception and are widely used in speech and speaker recognition tasks. 
@@ -65,7 +70,9 @@ Using the **Discrete Cosine Transform (DCT)** to decorrelate features and concen
 
 These MFCC features serve as the primary input for speaker recognition and classification.
 
-**Figure 3. An example of mel-spaced filter bank**
+![Figure 1. Basic structures of speaker identification systems](images/Fig3.png) 
+
+Figure 3. An example of mel-spaced filter bank - ref.3
 
 ### **3.3 Speaker Codebook Generation with Vector Quantization**
 Once MFCC features are extracted, the system applies vector quantization to generate a speaker-specific codebook. This process involves:
@@ -75,7 +82,9 @@ Once MFCC features are extracted, the system applies vector quantization to gene
 
 Vector qantization reduces the complexity of classification by representing each speaker's unique feature set with a limited number of representative points.
 
-**Figure 4. Conceptual diagram illustrating vector quantization codebook formation**
+![Figure 1. Basic structures of speaker identification systems](images/Fig4.png)
+
+Figure 4. Conceptual diagram illustrating vector quantization codebook formation - ref.4
 
 ## **4. Code Overview**
 The speaker recognition system is implemented in MATLAB and follows a structured workflow:
@@ -106,7 +115,9 @@ Evaluating the system’s performance in noisy environments.
 Exploring deep learning-based speaker embeddings for improved accuracy and scalability.
 Implementing real-time speaker recognition applications for practical deployment.
 
-**Figure 5. Flow diagram of LBG algorithm (Adopted from Rabiner and Juang, 1993)**
+![Figure 1. Basic structures of speaker identification systems](images/Fig5.png)
+
+Figure 5. Flow diagram of LBG algorithm - ref.5
 
 ## **7. Refrences**
 Fazel, A., & Chakrabartty, S. (2011). An Overview of Statistical Pattern Recognition Techniques for Speaker Verification. *IEEE Circuits and Systems Magazine, 11*(2), 62-81. https://doi.org/10.1109/MCAS.2011.941080
