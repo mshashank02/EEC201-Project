@@ -94,7 +94,7 @@ This project consists of **7 MATLAB scripts**, each performing speech recognitio
 
 ---
 
-### Feel free to add your own voise samples and test for recognition.
+### Feel free to add your own voice samples to the data set and test for recognition 😊
 
 
 
