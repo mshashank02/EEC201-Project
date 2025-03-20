@@ -169,84 +169,84 @@ The final output of the system displays the predicted speaker for each test samp
 
 Figure 5. Flow diagram of LBG algorithm - ref.5
 
-The algorithm was refined through a series of structured tests, each focusing on a crucial step in the speech processing pipeline. Below is a detailed breakdown of the development process and findings from each test.
+# Algorithm Development & Testing
+
+Our algorithm was refined through a series of structured tests, each focusing on a crucial step in the speech processing pipeline. Below is a detailed breakdown of the development process and findings from each test.
 
 ## TEST 1: Human Recognition of Speech
-Before building an automated speech recognition system, an initial test was conducted to assess human recognition ability. Training audio samples were listened to and manually matched to their respective speakers. Test files were then played in a random order, and speakers were identified based on perception. The achieved accuracy was **34%**, highlighting the difficulty of manual speaker recognition. This served as a baseline for evaluating the performance of the automated system.
+Before building an automated speech recognition system, we tested our ability to recognize different speakers manually. We listened to training audio samples and attempted to match them to their respective speakers. Next, we played test files in a random order and tried to identify the speaker based on our perception.
 
----
+After performing this exercise, we achieved an accuracy of 34%, demonstrating the difficulty of speaker recognition through human perception alone. This provided a baseline for evaluating the performance of our automated system.
 
 ## TEST 2: Time-Domain Representation & Spectral Analysis
-Speech signals vary significantly in amplitude and duration, making **preprocessing and visualization** important for understanding their structure. In this test, raw waveforms of speech signals were examined and their spectral characteristics analyzed.
+Speech signals vary significantly in amplitude and duration, making preprocessing and visualization important for understanding their structure. In this test, we examined the raw waveform of speech and analyzed its spectral characteristics.
 
-- **Time-domain representation** was plotted, showing variations in amplitude and duration.
-- **Normalization** was applied to ensure consistency in feature extraction.
-- **STFT (Short-Time Fourier Transform)** was used to generate a **periodogram**, displaying the energy distribution over time and frequency.
+To begin, we loaded and plotted each speech signal in the time domain, revealing how different speakers exhibit varying amplitudes and speech durations. Since these variations can affect feature extraction, we normalized the signals to ensure consistent processing. The signals were then transformed into the frequency domain using STFT (Short-Time Fourier Transform) to generate a periodogram, which displays how speech energy is distributed across time and frequency.
 
-Key observations:
-- **Raw speech signals showed large variations** in amplitude and duration.
-- **STFT periodograms highlighted dominant frequency components**, showing how speech energy is concentrated in certain bands.
+### From our observations:
+- Raw speech signals exhibited large variations in amplitude and duration.
+- STFT periodograms revealed dominant frequency components in different speech samples, indicating that important speech features are concentrated in certain frequency bands.
 
 *(Placeholder for Time-Domain Waveform and STFT Periodogram Images)*
 
----
-
 ## TEST 3: Mel-Spaced Filter Bank Response
-Mel scale conversion models human auditory perception by compressing higher frequencies. In this test, **Mel-spaced filter banks** were applied to speech signals, and their effect was analyzed.
+One of the fundamental transformations in speech processing is the Mel scale conversion, which helps model human auditory perception. The goal of this test was to apply Mel-spaced filter banks to speech signals and analyze their effect.
 
-- **40 Mel filters** were designed and applied to the **frequency spectrum** of speech signals.
-- The **filter responses were plotted**, confirming their expected triangular shape.
-- **Spectrograms before and after Mel filtering** were compared.
+To achieve this, we designed 40 Mel filters and applied them to the frequency spectrum of the speech signals. The responses of the filters were then plotted to verify that they followed the expected triangular shape.
 
-Key findings:
-- **Mel filter bank responses compressed higher frequencies**, aligning with human auditory perception.
-- **Spectrograms showed how Mel filtering emphasizes speech-relevant frequencies** while reducing irrelevant noise.
+### Key findings:
+- The Mel filter bank response showed compression of higher frequencies, aligning with how humans perceive sound.
+- The speech spectrogram before and after Mel filtering demonstrated how the transformation effectively emphasizes speech-relevant frequency components while reducing less useful information.
 
 *(Placeholder for Mel Filter Bank Response and Before/After Filtering Spectrogram Images)*
 
----
-
 ## TEST 4: Cepstrum Analysis
-The **Cepstrum representation** provides a compact way to differentiate speakers by focusing on vocal tract characteristics.
+Extracting Cepstral features is a crucial step in speech recognition, as it helps distinguish different speakers' vocal characteristics. In this test, we computed MFCCs (Mel-Frequency Cepstral Coefficients) and analyzed the Cepstrum representation of the speech signals.
 
-Steps involved:
-1. **Apply Discrete Cosine Transform (DCT):** Compresses spectral information.
-2. **Remove redundant frequency variations:** Retains only the most important coefficients.
-3. **Extract MFCCs:** Captures key speech features while reducing noise.
+### Steps involved:
+1. **Apply Discrete Cosine Transform (DCT):** This compresses spectral information, keeping only the most relevant coefficients.
+2. **Remove redundant frequency variations:** By focusing on the lower-order coefficients, we eliminate unnecessary frequency information.
+3. **Extract MFCCs:** The first few MFCCs capture essential speech features, making them useful for recognition.
 
-Findings:
-- **MFCC features retained key speaker characteristics** while reducing irrelevant spectral variations.
-- **Cepstrum representation compactly captured vocal tract characteristics**, making it useful for speaker recognition.
+### Our analysis showed that:
+- MFCC features retained key speaker characteristics while reducing noise and irrelevant variations.
+- Cepstrum representation provided a more compact and effective way to differentiate between different speakers.
 
 *(Placeholder for MFCC Feature Representation and Cepstrum Image)*
 
----
-
 ## TEST 5: Visualizing Acoustic Space (MFCC Clusters)
-To verify the effectiveness of MFCC feature extraction, **MFCC feature vectors were plotted for multiple speakers**. If the feature extraction process was effective, clusters should form, with each speaker’s features grouped closely together.
+To verify the effectiveness of our extracted MFCC features, we examined how well they form distinct clusters for different speakers. If MFCCs work correctly, the feature vectors for each speaker should be grouped closely together, making it easier to distinguish between different individuals.
 
-- **Second and third MFCC coefficients were plotted** for different speakers.
-- **Different colors were assigned** to each speaker for easy visualization.
+We extracted MFCC feature vectors from multiple speakers and plotted the second and third MFCC coefficients against each other. Each speaker’s features were color-coded for easy differentiation.
 
-Observations:
-- **Distinct clusters formed for different speakers**, confirming the effectiveness of MFCCs.
-- **Some overlap existed, but most features remained well-separated**, validating the speaker recognition approach.
+### Observations:
+- Distinct clusters were formed for different speakers, confirming that MFCCs effectively capture speaker characteristics.
+- While some overlap existed, many features remained well-separated, proving that our approach is useful for speaker differentiation.
 
 *(Placeholder for MFCC Feature Space Scatter Plot)*
 
----
-
 ## TEST 6: Vector Quantization (VQ) Codewords
-Vector Quantization (VQ) compresses the MFCC feature space while preserving key information for speaker recognition.
+The final step in our recognition pipeline was Vector Quantization (VQ), which compresses the MFCC feature space while preserving key information. This step ensures that speaker models remain compact and efficient.
 
-- A **VQ Codebook** was trained using the **Linde-Buzo-Gray (LBG) algorithm**.
-- **Quantized codewords were overlaid on the MFCC feature vectors** from TEST 5.
+We trained a VQ Codebook using the Linde-Buzo-Gray (LBG) algorithm and overlaid the quantized codewords onto the previously plotted MFCC feature vectors.
 
-Findings:
-- **VQ codewords followed the MFCC clusters**, confirming their effectiveness in representing speech features.
-- **VQ optimized memory usage while preserving speaker characteristics**, making it useful for speaker modeling.
+### Results & Observations:
+- The VQ codewords closely followed the MFCC clusters, confirming that they effectively represent the speaker’s speech patterns.
+- By comparing the codewords to the original MFCC feature vectors, we observed that VQ provides an efficient representation without losing critical speaker identity.
 
 *(Placeholder for VQ Codewords Over MFCC Clusters Plot)*
+
+## Conclusion
+This project successfully implemented a speech recognition system using MFCC feature extraction and Vector Quantization. The step-by-step evaluations confirmed the effectiveness of each DSP technique in transforming speech into a meaningful representation for recognition.
+
+### Key Takeaways:
+- **MFCCs** provide a robust feature set for distinguishing speakers.
+- **Mel filtering** improves feature representation, ensuring that speech-relevant frequencies are prioritized.
+- **Cepstrum analysis** effectively reduces redundant spectral information, making classification easier.
+- **Vector Quantization** optimizes memory usage while retaining the necessary features for recognition.
+
+Our system demonstrates a well-structured speech processing pipeline, forming the foundation for speaker identification and speech recognition applications.
+
 
 
 
