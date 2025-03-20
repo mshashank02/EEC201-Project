@@ -233,7 +233,7 @@ To achieve this, we designed 40 Mel filters and applied them to the frequency sp
 - The speech spectrogram before and after Mel filtering demonstrated how the transformation effectively emphasizes speech-relevant frequency components while reducing less useful information.
 
 Figure. Mel Filter Bank Response and Before/After Filtering Spectrogram Images
-![Figure 1. Basic structures of speaker identification systems](images/Fig12.png)
+![Figure 1. Basic structures of speaker identification systems](images/Fig11.png)
 
 ## TEST 4: Cepstrum Analysis
 Extracting Cepstral features is a crucial step in speech recognition, as it helps distinguish different speakers' vocal characteristics. In this test, we computed MFCCs (Mel-Frequency Cepstral Coefficients) and analyzed the Cepstrum representation of the speech signals.
@@ -290,6 +290,8 @@ Our system demonstrates a well-structured speech processing pipeline, forming th
 ## **5. Results and Analysis**
 
 ![Figure 1. Basic structures of speaker identification systems](images/Picture15.png)
+
+
 The table above summarizes the accuracy results obtained from various speech recognition experiments conducted in this project.
 
 The Zero Test Dataset achieved 100% accuracy, indicating that the system correctly recognized all test samples. The Notch Filter applied to the same dataset maintained this accuracy, suggesting that the filter did not negatively impact recognition.
