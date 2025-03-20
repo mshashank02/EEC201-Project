@@ -187,7 +187,13 @@ To begin, we loaded and plotted each speech signal in the time domain, revealing
 - Raw speech signals exhibited large variations in amplitude and duration.
 - STFT periodograms revealed dominant frequency components in different speech samples, indicating that important speech features are concentrated in certain frequency bands.
 
-*(Placeholder for Time-Domain Waveform and STFT Periodogram Images)*
+Figures below are Time-Domain Waveform and normalised signal waveforms and STFT Periodogram Images
+![Figure 1. Basic structures of speaker identification systems](images/Fig6.png)
+![Figure 1. Basic structures of speaker identification systems](images/Fig7.png)
+![Figure 1. Basic structures of speaker identification systems](images/Fig8.png)
+![Figure 1. Basic structures of speaker identification systems](images/Fig9.png)
+![Figure 1. Basic structures of speaker identification systems](images/Fig10.png)
+
 
 ## TEST 3: Mel-Spaced Filter Bank Response
 One of the fundamental transformations in speech processing is the Mel scale conversion, which helps model human auditory perception. The goal of this test was to apply Mel-spaced filter banks to speech signals and analyze their effect.
@@ -198,7 +204,8 @@ To achieve this, we designed 40 Mel filters and applied them to the frequency sp
 - The Mel filter bank response showed compression of higher frequencies, aligning with how humans perceive sound.
 - The speech spectrogram before and after Mel filtering demonstrated how the transformation effectively emphasizes speech-relevant frequency components while reducing less useful information.
 
-*(Placeholder for Mel Filter Bank Response and Before/After Filtering Spectrogram Images)*
+Figure. Mel Filter Bank Response and Before/After Filtering Spectrogram Images
+![Figure 1. Basic structures of speaker identification systems](images/Fig12.png)
 
 ## TEST 4: Cepstrum Analysis
 Extracting Cepstral features is a crucial step in speech recognition, as it helps distinguish different speakers' vocal characteristics. In this test, we computed MFCCs (Mel-Frequency Cepstral Coefficients) and analyzed the Cepstrum representation of the speech signals.
@@ -212,7 +219,6 @@ Extracting Cepstral features is a crucial step in speech recognition, as it help
 - MFCC features retained key speaker characteristics while reducing noise and irrelevant variations.
 - Cepstrum representation provided a more compact and effective way to differentiate between different speakers.
 
-*(Placeholder for MFCC Feature Representation and Cepstrum Image)*
 
 ## TEST 5: Visualizing Acoustic Space (MFCC Clusters)
 To verify the effectiveness of our extracted MFCC features, we examined how well they form distinct clusters for different speakers. If MFCCs work correctly, the feature vectors for each speaker should be grouped closely together, making it easier to distinguish between different individuals.
@@ -223,7 +229,8 @@ We extracted MFCC feature vectors from multiple speakers and plotted the second 
 - Distinct clusters were formed for different speakers, confirming that MFCCs effectively capture speaker characteristics.
 - While some overlap existed, many features remained well-separated, proving that our approach is useful for speaker differentiation.
 
-*(Placeholder for MFCC Feature Space Scatter Plot)*
+Figure. MFCC Feature Space Scatter Plot
+![Figure 1. Basic structures of speaker identification systems](images/Fig13.png)
 
 ## TEST 6: Vector Quantization (VQ) Codewords
 The final step in our recognition pipeline was Vector Quantization (VQ), which compresses the MFCC feature space while preserving key information. This step ensures that speaker models remain compact and efficient.
@@ -234,7 +241,8 @@ We trained a VQ Codebook using the Linde-Buzo-Gray (LBG) algorithm and overlaid 
 - The VQ codewords closely followed the MFCC clusters, confirming that they effectively represent the speaker’s speech patterns.
 - By comparing the codewords to the original MFCC feature vectors, we observed that VQ provides an efficient representation without losing critical speaker identity.
 
-*(Placeholder for VQ Codewords Over MFCC Clusters Plot)*
+Figure for VQ Codewords Over MFCC Clusters Plot
+![Figure 1. Basic structures of speaker identification systems](images/Fig14.png)
 
 ## Conclusion
 This project successfully implemented a speech recognition system using MFCC feature extraction and Vector Quantization. The step-by-step evaluations confirmed the effectiveness of each DSP technique in transforming speech into a meaningful representation for recognition.
