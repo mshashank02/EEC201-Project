@@ -289,6 +289,7 @@ Our system demonstrates a well-structured speech processing pipeline, forming th
 
 ## **5. Results and Analysis**
 
+![Figure 1. Basic structures of speaker identification systems](images/Fig15.png)
 The table above summarizes the accuracy results obtained from various speech recognition experiments conducted in this project.
 
 The Zero Test Dataset achieved 100% accuracy, indicating that the system correctly recognized all test samples. The Notch Filter applied to the same dataset maintained this accuracy, suggesting that the filter did not negatively impact recognition.
@@ -308,9 +309,10 @@ Evaluating the system’s performance in noisy environments.
 Exploring deep learning-based speaker embeddings for improved accuracy and scalability.
 Implementing real-time speaker recognition applications for practical deployment.
 
-
-
-## **7. Refrences**
+## **7. Example Output**
+![Figure 1. Basic structures of speaker identification systems](images/Fig16.png)
+![Figure 1. Basic structures of speaker identification systems](images/Fig16.png)
+## **8. Refrences**
 Fazel, A., & Chakrabartty, S. (2011). An Overview of Statistical Pattern Recognition Techniques for Speaker Verification. *IEEE Circuits and Systems Magazine, 11*(2), 62-81. https://doi.org/10.1109/MCAS.2011.941080
 
 Abdouni, A., Vargiolu, R., & Zahouani, H. (2018). Impact of finger biophysical properties on touch gestures and tactile perception: Aging and gender effects. *Scientific Reports.* https://doi.org/10.1038/s41598-018-30677-2
