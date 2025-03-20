@@ -187,13 +187,41 @@ To begin, we loaded and plotted each speech signal in the time domain, revealing
 - Raw speech signals exhibited large variations in amplitude and duration.
 - STFT periodograms revealed dominant frequency components in different speech samples, indicating that important speech features are concentrated in certain frequency bands.
 
-Figures below are Time-Domain Waveform and normalised signal waveforms and STFT Periodogram Images
+Figures below are Time-Domain Waveform and normalised signal waveforms
 ![Figure 1. Basic structures of speaker identification systems](images/Fig6.png)
 ![Figure 1. Basic structures of speaker identification systems](images/Fig7.png)
+
+Figures below are STFT Periodogram plots different Frame and Overlap sizes
 ![Figure 1. Basic structures of speaker identification systems](images/Fig8.png)
 ![Figure 1. Basic structures of speaker identification systems](images/Fig9.png)
 ![Figure 1. Basic structures of speaker identification systems](images/Fig10.png)
 
+# STFT Periodogram Analysis: Effect of Frame Size (N) and Overlap (M)
+
+## Observations on Different Frame Sizes (N)
+
+When analyzing STFT periodograms with different frame sizes (N) and overlap sizes (M), we observe a clear trade-off between time and frequency resolution:
+
+- **Small N (e.g., 128):**  
+  - Provides better time resolution, capturing sharp vertical transitions effectively.
+  - Results in poor frequency resolution, making horizontal bands appear blurry.
+  - Useful for detecting transient sounds, such as plosives in speech.
+
+- **Medium N (e.g., 512):**  
+  - Offers a balanced trade-off between time and frequency resolution.
+  - Suitable for general speech analysis, where both time structure and frequency details are important.
+
+- **Large N (e.g., 1024):**  
+  - Improves frequency resolution, producing sharp horizontal bands and enhancing the clarity of stable sounds like vowels.
+  - Comes at the cost of time resolution, leading to smoothed transitions.
+  - Useful for analyzing sustained speech components like vowels.
+
+### Choosing the Right N
+The choice of N depends on the specific aspects of speech being analyzed:
+- Smaller values of N favor **time precision**, making them ideal for transient speech sounds.
+- Larger values of N enhance **spectral clarity**, making them more effective for analyzing steady-state sounds.
+
+This trade-off highlights the importance of selecting an appropriate N depending on the requirements of speech feature extraction and recognition tasks.
 
 ## TEST 3: Mel-Spaced Filter Bank Response
 One of the fundamental transformations in speech processing is the Mel scale conversion, which helps model human auditory perception. The goal of this test was to apply Mel-spaced filter banks to speech signals and analyze their effect.
