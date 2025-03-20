@@ -94,11 +94,7 @@ This project consists of **7 MATLAB scripts**, each performing speech recognitio
 
 ---
 
-## Modifications & Customization
-- **Modify Speaker Count:** Update the number of speakers in each script **where necessary**.
-- **Use Your Own Voice Samples:**
-  - Record and store new voice samples in the same folder structure.
-  - Update training and testing speaker count accordingly.
+## Feel free to add your own voise samples and test for recognition.
 
 
 
