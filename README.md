@@ -196,9 +196,9 @@ Figures below are STFT Periodogram plots different Frame and Overlap sizes
 ![Figure 1. Basic structures of speaker identification systems](images/Fig9.png)
 ![Figure 1. Basic structures of speaker identification systems](images/Fig10.png)
 
-# STFT Periodogram Analysis: Effect of Frame Size (N) and Overlap (M)
+## STFT Periodogram Analysis: Effect of Frame Size (N) and Overlap (M)
 
-## Observations on Different Frame Sizes (N)
+### Observations on Different Frame Sizes (N)
 
 When analyzing STFT periodograms with different frame sizes (N) and overlap sizes (M), we observe a clear trade-off between time and frequency resolution:
 
