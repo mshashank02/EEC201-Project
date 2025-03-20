@@ -5,30 +5,102 @@ Students: Shashank M, Sahishnu Raju Kakarlapudi
 
 Team Name: Vocalists 
 
-## **Instructions to Run the Code**
+# Speaker Recognition using DSP in MATLAB
 
-### **Test 1 - Initial Speaker Recognition on Given Speech Data**
-**File:** `DSP_Speech_Winter_test1.m`
+## Project Overview
+This speech recognition system extracts key features using MFCCs and analyzes time-frequency patterns with STFT. Pre-emphasis filtering enhances high frequencies, while windowing reduces spectral leakage. Vector quantization (VQ) with the LBG algorithm clusters feature vectors to build speaker models. The system optimizes recognition by balancing time-frequency resolution and leveraging MFCC-based feature extraction for robust performance.
 
-- This script contains code for **training and testing** on the initial speech files provided under the **GivenSpeech_Data** folder on Canvas.
-- Specifically, it uses speech recordings where speakers say the word **"zero."**
-- **Before running, update the data folder paths** in **lines 8 and 9**.
-- Use the following dataset folders:
+## Instructions to Run the Code
+
+### MATLAB Files & Their Functions
+This project consists of **7 MATLAB scripts**, each performing speech recognition on different training and testing datasets.
+
+---
+
+### 1. Main Script: `Script_TestData_Zeros_WithPlots.m`
+- **Purpose:** Trains and tests on the **calibration "zero" word dataset** found in the `data` folder.
+- **Data Used:**
+  - **Training Data:** `Train_our`
+  - **Testing Data:** `Test_our`
+- **Functionality:** This script **plots and visualizes** different audio characteristics of the dataset.
+
+#### Steps to Run:
+1. **Modify Data Paths:**
+   - Update **line 5 and line 6** to reflect the correct paths to your dataset.
+2. **Set Speaker Count:**
+   - Update **line 11 and line 12** with the correct number of speakers for training and testing.
+   - If you want to use your own dataset, update these lines accordingly.
+
+---
+
+### 2. `Script_Notch_ZeroTestData.m`
+- **Purpose:**  
+  - Applies **Notch filtering** to suppress certain features in the calibration dataset.
+  - Checks for the robustness of speech recognition after filtering.
+- **Data Used:**
   - **Training Data:** `Train_our`
   - **Testing Data:** `Test_our`
 
-### **Test 2, 3, 4, 5 - Extended Speaker Recognition**
-**File:** `DSP_Proj_test2_3_4_5.m`
+---
 
-This script contains code for extended speaker recognition tests using additional datasets.
-**Before running, update the data folder paths** in **lines 5 and 6**.
-Adjust the **number of speakers** in **lines 12 and 13** based on the test being performed.
+### 3. `Script_Five_Twelve_SingleData.m`
+- **Purpose:**  
+  - Checks for **speaker recognition** using the words "Five" and "Twelve," which are trained and tested separately.
+- **Data Used:**
+  - **Training Data:** `Five-Training`, `Twelve-Training`
+  - **Testing Data:** `Five-Test`, `Twelve-Testing`
 
-#### **Test Descriptions:**
-- **Test 2:** Training and testing on previous year's **"Twelve"** speech files from the `2024StudentAudioRecording` folder.
-- **Test 3:** Training and testing on previous year's **"Zero"** speech files from the `2024StudentAudioRecording` folder.
-- **Test 4:** Training and testing on this year's (2025) students' **"Five"** speech files.
-- **Test 5:** Training and testing on this year's (2025) students' **"Eleven"** speech files.
+---
+
+### 4. `Script_TestZero_Eleven_SingleData.m`
+- **Purpose:**  
+  - Checks for **speaker recognition** using the words "Zero" and "Eleven," which are trained and tested separately.
+- **Data Used:**
+  - **Training Data:** `Zero-Training`, `Eleven-Training`
+  - **Testing Data:** `Zero-Testing`, `Eleven-Test`
+
+---
+
+### 5. `Script_TestZero_ZeroCombData.m`
+- **Purpose:**  
+  - Tests are conducted where the **speech files of "Zero" are placed in one folder, trained together, and tested** to check:
+    1. If the system correctly matches the speech files to the **right person**.
+    2. If the system correctly identifies the **right word spoken by the right person**.
+- **Data Used:**
+  - **Training Data:** `ZeroComb-Train`
+  - **Testing Data:** `ZeroComb-Test`
+
+---
+
+### 6. `Script_Zero_Twelve_CombData.m`
+- **Purpose:**  
+  - Tests are conducted where the **speech files of both "Zero" and "Twelve" are placed in one folder, trained together, and tested** to check:
+    1. If the system correctly matches the speech files to the **right person**.
+    2. If the system correctly identifies the **right word spoken by the right person**.
+- **Data Used:**
+  - **Training Data:** `ZeroTwelveComb-Train`
+  - **Testing Data:** `ZeroTwelveComb-Test`
+
+---
+
+### 7. `Script_FiveElevenCombinedData.m`
+- **Purpose:**  
+  - Tests are conducted where the **speech files of both "Five" and "Eleven" are placed in one folder, trained together, and tested** to check:
+    1. If the system correctly matches the speech files to the **right person**.
+    2. If the system correctly identifies the **right word spoken by the right person**.
+- **Data Used:**
+  - **Training Data:** `FiveElevenComb-Train`
+  - **Testing Data:** `FiveElevenComb-Test`
+
+---
+
+## Modifications & Customization
+- **Modify Speaker Count:** Update the number of speakers in each script **where necessary**.
+- **Use Your Own Voice Samples:**
+  - Record and store new voice samples in the same folder structure.
+  - Update training and testing speaker count accordingly.
+
+
 
 
 ## **1. Introduction**
