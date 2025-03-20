@@ -5,6 +5,8 @@ Students: Shashank M, Sahishnu Raju Kakarlapudi
 
 Team Name: Vocalists 
 
+Video Presentation: https://drive.google.com/file/d/1KFcE0B6rBV9x0xKjaVMoyX_XC_uw5OtT/view?usp=sharing
+
 ## Project Overview
 This speech recognition system extracts key features using MFCCs and analyzes time-frequency patterns with STFT. Pre-emphasis filtering enhances high frequencies, while windowing reduces spectral leakage. Vector quantization (VQ) with the LBG algorithm clusters feature vectors to build speaker models. The system optimizes recognition by balancing time-frequency resolution and leveraging MFCC-based feature extraction for robust performance.
 
