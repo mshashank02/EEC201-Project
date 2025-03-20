@@ -45,7 +45,7 @@ This project consists of **7 MATLAB scripts**, each performing speech recognitio
 
 ### 3. `Script_Five_Twelve_Zero_SingleData.m`
 - **Purpose:**  
-  - Checks for **speaker recognition** using the words "Five" and "Twelve," which are trained and tested separately.
+  - Checks for **speaker recognition** using the words "Five" and "Twelve" and "Zero," which are trained and tested separately.
 - **Data Used:**
   - **Training Data:** `Five-Training`, `Twelve-Training`, `Zero-Training`
   - **Testing Data:** `Five-Test`, `Twelve-Testing`, `Zero-Training`
