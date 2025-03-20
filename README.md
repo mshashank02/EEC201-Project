@@ -13,7 +13,7 @@ This speech recognition system extracts key features using MFCCs and analyzes ti
 ## Instructions to Run the Code
 
 ### MATLAB Files & Their Functions
-This project consists of **7 MATLAB scripts**, each performing speech recognition on different training and testing datasets.
+This project consists of **7 MATLAB scripts**, each performing speech recognition on different training and testing datasets. Just download and run script per choice (All necessary Functions are present in all the matlab scripts).
 
 ---
 
