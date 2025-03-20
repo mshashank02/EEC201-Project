@@ -288,13 +288,16 @@ Our system demonstrates a well-structured speech processing pipeline, forming th
 
 
 ## **5. Results and Analysis**
-In this preliminary evaluation, the system was tested on a dataset where speakers pronounced the word "zero." The system achieved **100% recognition accuracy** for this specific test case. 
 
-The results highlight the effectiveness of MFCC-based feature extraction and vector quantization for speaker recognition. The use of logarithmic scaling and DCT in the MFCC computation very much improves feature separability, leading to precise speaker classification. Additionally, by leveraging vector quantization, the system efficiently clusters and matches features, further enhancing accuracy.
+The table above summarizes the accuracy results obtained from various speech recognition experiments conducted in this project.
 
-In comparison to direct FFT-based recognition, the use of MFCC provides a more nicer representation of speech characteristics. FFT alone fails to capture speaker-specific nuances, whereas MFCC effectively emphasizes key speech features, resulting in superior classification performance.
+The Zero Test Dataset achieved 100% accuracy, indicating that the system correctly recognized all test samples. The Notch Filter applied to the same dataset maintained this accuracy, suggesting that the filter did not negatively impact recognition.
 
-While the system has demonstrated high accuracy in this test case, aditional evaluations are required to assess its robustness against variations in speech content, background noise, and speaker emotion. Future tests will have more words and diverse speaker conditions to validate its effectiveness further.
+Student recordings from 2024 showed a decrease in accuracy (78% for "Zero" and 88% for "Twelve"), likely due to variations in pronunciation and recording conditions. However, when the Zero Test Dataset was combined with "Zero" from the student recordings, accuracy improved to 88%, indicating that a larger and more diverse dataset helped improve recognition.
+
+In combined datasets, where different words spoken by the same speaker were trained together, accuracy varied. The Zero-Twelve combined dataset for speaker recognition achieved 86%, but when testing both speaker and word recognition, accuracy dropped to 77%, reflecting the added complexity of distinguishing words as well as speakers.
+
+For 2025 recordings, "Five" and "Eleven" were tested separately, achieving 88% and 100% accuracy, respectively. When the Five-Eleven dataset was combined for speaker recognition, accuracy remained high at 91%, but when word recognition was added, it dropped to 78%, similar to the Zero-Twelve dataset results.
 
 ## **6. Conclusion and Future Work**
 This preliminary implementation successfully demonstrates a speaker recognition system using MFCC and vector quantization, achieving 100% accuracy on the test case. The results confirm that MFCC-based feature extraction is highly effective for distinguishing speakers, while vector quantization provides a compact and efficient representation of speech features.
